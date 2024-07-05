@@ -349,7 +349,7 @@
               <!-- CTA -->
               <a
                 class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
-                href="https://aws.amazon.com/ec2/faqs/"
+                href="https://aws.amazon.com/ec2/faqs/" target="_blank"
               >
                 <div class="flex items-center">
                   <svg
@@ -361,7 +361,7 @@
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                     ></path>
                   </svg>
-                  <span>Click here for EC2 Input's FAQ</span>
+                  <span>Click here for RDS Input's FAQ</span>
                 </div>
                 <span>View more &RightArrow;</span>
               </a>
@@ -376,16 +376,31 @@
                 class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
               >
                 <label class="block text-sm">
-                  <span class="text-gray-700 dark:text-gray-400">Instance Type</span>
+                  <span class="text-gray-700 dark:text-gray-400">Engine Type</span>
                   <input
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="m5.2xlarge"
+                    placeholder="Microsoft SQL Server "
                   />
                 </label>
-  
+                <!--Edition-->
+                <label class="block text-sm" style="margin-top: 8px;">
+                  <span class="text-gray-700 dark:text-gray-400">Edition</span>
+                  <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="SQL Server Web Edition"
+                  />
+                </label>
+                <!--Engine Version-->
+                <label class="block text-sm" style="margin-top: 8px ;">
+                  <span class="text-gray-700 dark:text-gray-400">Engine Version</span>
+                  <input
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="SQL Server 2022 16.00.4085.2v1"
+                  />
+                </label>
                 <div class="mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">
-                    Termination protection setting 
+                     Security Groups
                   </span>
                   <div class="mt-2">
                     <label
@@ -397,7 +412,7 @@
                         name="accountType"
                         value="personal"
                       />
-                      <span class="ml-2">Yes</span>
+                      <span class="ml-2">Create New VPC</span>
                     </label>
                     <label
                       class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400"
@@ -408,11 +423,43 @@
                         name="accountType"
                         value="busines"
                       />
-                      <span class="ml-2">No</span>
+                      <span class="ml-2">Use Existing One </span>
                     </label>
                   </div>
                 </div>
-  
+                <!--template -->
+                <div class="mt-4 text-sm">
+                  <span class="text-gray-700 dark:text-gray-400">
+                     Choose Template 
+                  </span>
+                  <div class="mt-2">
+                    <label
+                      class="inline-flex items-center text-gray-600 dark:text-gray-400"
+                    >
+                      <input
+                        type="radio"
+                        class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                        name="accountType"
+                        value="personal"
+                      />
+                      <span class="ml-2">Production</span>
+                    </label>
+                    <label
+                      class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400"
+                    >
+                      <input
+                        type="radio"
+                        class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                        name="accountType"
+                        value="busines"
+                      />
+                      <span class="ml-2">Test/Dev</span>
+                    </label>
+                  </div>
+                </div>
+                
+                
+
                 <label class="block mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">
                     Provide the Justification and Submit the Request
