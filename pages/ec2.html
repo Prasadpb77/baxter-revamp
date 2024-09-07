@@ -349,8 +349,7 @@
               <!-- CTA -->
               <a
                 class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
-                href="https://aws.amazon.com/ec2/faqs/"
-              >
+                href="https://aws.amazon.com/ec2/faqs/" target="_blank"              >
                 <div class="flex items-center">
                   <svg
                     class="w-5 h-5 mr-2"
@@ -365,7 +364,6 @@
                 </div>
                 <span>View more &RightArrow;</span>
               </a>
-  
               <!-- General elements -->
               <h4
                 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
@@ -375,14 +373,72 @@
               <div
                 class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
               >
-                <label class="block text-sm">
-                  <span class="text-gray-700 dark:text-gray-400">Instance Type</span>
-                  <input
-                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                    placeholder="m5.2xlarge"
-                  />
-                </label>
-  
+              <!--OS version-->
+              <label class="block text-sm" style="margin-top: 8px ;">
+                <span class="text-gray-700 dark:text-gray-400">AMI ID</span>
+                <input
+                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                  placeholder="ami-066784287dad1"
+                />
+              </label>
+              <div class="mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-400">
+                   Operating System
+                </span>
+                <div class="mt-2">
+                  <label
+                    class="inline-flex items-center text-gray-600 dark:text-gray-400"
+                  >
+                    <input
+                      type="radio"
+                      class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                      name="accountType"
+                      value="personal"
+                    />
+                    <span class="ml-2">Window</span>
+                  </label>
+                  <label
+                    class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400"
+                  >
+                    <input
+                      type="radio"
+                      class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                      name="accountType"
+                      value="busines"
+                    />
+                    <span class="ml-2">Linux </span>
+                  </label>
+                </div>
+              </div>
+              <!--Instance type-->
+              <label class="block text-sm" style="margin-top: 8px;">
+                <span class="text-gray-700 dark:text-gray-400"style="margin-right: 20px;" >Instance Type</span>
+                <select name="Instance"id="instance"style="border: 1px solid grey;border-radius:5px;color:grey;">
+                  <option value="">Choose the Instance </option>
+                  <option value="">t2.nano</option>
+                  <option value="">m4.xlarge</option>
+                  <option value="">m5.16xlarge</option>
+                  <option value="">m7g.large</option>
+                  <option value="">c7.g.large</option>
+                  <option value="">c4.large</option>
+                  <option value="">c5.large</option>
+                  <option value="">c7a.large</option>
+                  <option value="">r8g.xlarge</option>
+                  <option value="">r6g.large</option>
+                  <option value="">r7a.large</option>
+                  <option value="">i4g.8xlarge</option>
+                  <option value="">i4g.xlarge</option>
+                </select>
+              </label>
+              <!--Security group-->
+              <label class="block text-sm" style="margin-top: 8px ;">
+                <span class="text-gray-700 dark:text-gray-400">Security group</span>
+                <input
+                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                  placeholder="sg-0c45313cae7a52eea"
+                />
+              </label>
+              <!--Termination protection-->
                 <div class="mt-4 text-sm">
                   <span class="text-gray-700 dark:text-gray-400">
                     Termination protection setting 
